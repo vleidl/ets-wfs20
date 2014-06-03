@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>WFS 2.0 (ISO 19142:2010) Conformance Test Suite</title>
+    <style type="text/css" media="screen,print">
+    body {
+      color: black;
+      background: white;
+    }
+    h1, h2 {
+      font-family: sans-serif;
+      color: #000099;
+      text-align: left;
+    }
+    h1 { font-size: 1.75em; }
+    h2 { font-size: 1.50em; }
+    </style>
+  </head>
+  <body>
+    <h1>WFS 2.0 (ISO 19142:2010) Conformance Test Suite</h1>
+
+    <p>This executable test suite checks Web Feature Service (WFS) 2.0 implementations 
+    for conformance to ISO 19142:2010, <em>Geographic information -- Web Feature Service</em> 
+    (also published as <a target="_blank" href="http://portal.opengeospatial.org/files/?artifact_id=39967">OGC 
+    09-025r1</a>). Four fundamental conformance levels are covered by the test suite:</p>
+    <ol>
+      <li><strong>Simple WFS</strong>: Implements the following operations: GetCapabilities, 
+    DescribeFeatureType, ListStoredQueries, DescribeStoredQueries, and the 
+    GetFeature operation with at least the StoredQuery action (GetFeatureById).</li>
+      <li><strong>Basic WFS</strong>: As for <strong>Simple WFS</strong>, plus the 
+    GetFeature operation with the Query action and the GetPropertyValue operation.</li>
+      <li><strong>Transactional WFS</strong>: As for <strong>Basic WFS</strong>, 
+    plus the Transaction operation.</li>
+      <li><strong>Locking WFS</strong>: As for <strong>Transactional WFS</strong>, 
+    plus at least one of the GetFeatureWithLock or LockFeature operations.</li>
+    </ol>
+
+    <p>The test suite is schema-aware in the sense that the WFS under test does 
+    not need to support any particular application schema or to be loaded with 
+    specialized test data. However, the following preconditions must be satisfied:</p>
+    <ul>
+      <li>The GML application schema meets the requirements of the GML conformance 
+    class <em>GML application schemas defining features and feature collections</em> 
+    (ISO 19136, A.1.4).</li>
+      <li>Data are available for at least one feature type advertised in the 
+    capabilities document.</li>
+    </ul>
+
+  </body>
+</html>
