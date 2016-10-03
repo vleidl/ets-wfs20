@@ -117,7 +117,8 @@ public class TestNGController implements TestSuiteController {
         TestSuiteLogger.log(Level.CONFIG, "Using TestNG config: " + tngSuite);
         TestSuiteLogger.log(Level.INFO, "Using outputDirPath: " + resultsDir.getAbsolutePath());
         // NOTE: setting third argument to 'true' enables the default listeners
-        this.executor = new TestNGExecutor(tngSuite.toString(), resultsDir.getAbsolutePath(), false);
+        this.executor = new TestNGExecutor(tngSuite.toString(),
+                resultsDir.getAbsolutePath(), true);
     }
 
     @Override
