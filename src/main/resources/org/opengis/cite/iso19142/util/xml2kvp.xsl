@@ -143,10 +143,7 @@
 
   <xsl:template name="CommonParameters">
     <xsl:text>service=WFS&amp;version=</xsl:text>
-    <xsl:if test="@version">
-      <xsl:text>&amp;version=</xsl:text>
-      <xsl:value-of select="@version" />
-    </xsl:if>
+    <xsl:value-of select="@version" />
     <xsl:text>&amp;request=</xsl:text>
     <xsl:value-of select="local-name()" />
   </xsl:template>
