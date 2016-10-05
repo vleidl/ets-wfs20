@@ -26,9 +26,9 @@
     <url>http://www.opengeospatial.org/</url>
   </organization>
   <scm>
-    <connection>scm:git:https://github.com/opengeospatial/ets-wfs20.git</connection>
-    <developerConnection>scm:git:git@github.com:opengeospatial/ets-wfs20.git</developerConnection>
-    <url>https://github.com/opengeospatial/ets-wfs20</url>
+    <connection>scm:git:https://github.com/vleidl/ets-wfs20.git</connection>
+    <developerConnection>scm:git:git@github.com:vleidl/ets-wfs20.git</developerConnection>
+    <url>https://github.com/vleidl/ets-wfs20</url>
     <tag>1.24</tag>
   </scm>
   <issueManagement>
