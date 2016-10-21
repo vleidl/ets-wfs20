@@ -228,7 +228,7 @@ public class WFSMessage {
         try {
             doc = BUILDER.parse(inputStream);
         } catch (Exception e) {
-            TestSuiteLogger.log(Level.WARNING, "Failed to parse request entity from classpath", e);
+            TestSuiteLogger.log(Level.WARNING, "Failed to parse request entity from input stream", e);
         }
         Attr verAttr = doc.getDocumentElement().getAttributeNode("version");
         if (null != verAttr && null != wfsVersion && !wfsVersion.isEmpty()) {
