@@ -1,5 +1,6 @@
 package org.opengis.cite.iso19142.util;
 
+import java.io.InputStream;
 import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -204,6 +205,30 @@ public class WFSMessage {
             doc = BUILDER.parse(WFSMessage.class.getResourceAsStream(resourceName));
         } catch (Exception e) {
             TestSuiteLogger.log(Level.WARNING, "Failed to parse request entity from classpath: " + resourceName, e);
+        }
+        Attr verAttr = doc.getDocumentElement().getAttributeNode("version");
+        if (null != verAttr && null != wfsVersion && !wfsVersion.isEmpty()) {
+            doc.getDocumentElement().getAttributeNode("version").setValue(wfsVersion);
+        }
+        return doc;
+    }
+
+    /**
+     * Creates an XML request entity of the specified request type.
+     *
+     * @param inputStream
+     *            The inputstream containing an XML request
+     *            entity.
+     * @param wfsVersion
+     *            A WFS version identifier ("2.0.0" if not specified).
+     * @return A Document representing a WFS request entity.
+     */
+    public static Document createRequestEntity(InputStream inputStream, String wfsVersion) {
+        Document doc = null;
+        try {
+            doc = BUILDER.parse(inputStream);
+        } catch (Exception e) {
+            TestSuiteLogger.log(Level.WARNING, "Failed to parse request entity from classpath", e);
         }
         Attr verAttr = doc.getDocumentElement().getAttributeNode("version");
         if (null != verAttr && null != wfsVersion && !wfsVersion.isEmpty()) {
