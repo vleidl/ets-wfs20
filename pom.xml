@@ -7,7 +7,7 @@
     <version>8</version>
   </parent>
   <artifactId>ets-wfs20</artifactId>
-  <version>1.24.2-pb</version>
+  <version>1.24.3-pb</version>
   <packaging>jar</packaging>
 
   <name>WFS 2.0 (ISO 19142:2010) Conformance Test Suite</name>
